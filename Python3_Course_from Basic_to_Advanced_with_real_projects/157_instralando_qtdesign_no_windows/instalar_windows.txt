@@ -1,0 +1,12 @@
+# Instalar e remover no Windows
+# Instalar Windows (Via PIP)
+pip install pyqt5-tools
+
+# Remover Windows (Via PIP)
+pip uninstall pyqt5-tools
+
+# ACESSAR NO WINDOWS (Obs.: este caminho poderá ser diferente)
+# Pasta
+explorer %LOCALAPPDATA%\programs\python\python37-32\lib\site-packages\pyqt5_tools\
+# Qt Designer
+%LOCALAPPDATA%\programs\python\python37-32\lib\site-packages\pyqt5_tools\designer.exe

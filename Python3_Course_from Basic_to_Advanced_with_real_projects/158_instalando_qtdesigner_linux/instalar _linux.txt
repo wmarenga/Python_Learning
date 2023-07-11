@@ -1,0 +1,9 @@
+# Instalar e remover Linux Ubuntu
+
+# Instalar Ubuntu
+pip install pyqt5
+sudo apt-get install qttools5-dev-tools
+
+# Remover Linux Ubuntu
+pip uninstall pyqt5
+sudo apt purge qttools5-dev-tools -y && sudo apt autoremove -y && sudo apt install -f
