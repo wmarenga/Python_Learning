@@ -1,0 +1,6 @@
+{
+    "python.defaultInterpreterPath": "C:/Users/wmare/OneDrive/Área de Trabalho/Curso_Atual/env/Scripts/python",
+    "code-runner.executorMap": {
+        "python": "python -u",
+    }
+    }
