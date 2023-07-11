@@ -1,0 +1,19 @@
+1) Entrer na pasta do meu projeto pelo terminal (VSCode);
+2) $ python --version (verificar a versao do Python)
+3) $ python3 -m venv venv
+4) Sera criada uma pasta de ambiente virtual dentro da pasta do meu projeto
+5) Entrar no PowerShell e ativar o ambiente virtual (env) - (.venv/bin/activate)
+6) Se nao conseguir ativar devera seguir os passos abaixo para habilitar a ativacao de scripts no windows
+	6.1) Abra seu PowerShell como administrador
+	6.2) Digite "Set-ExecutionPolicy RemoteSigned -Force
+	6.3) Execute "gpedit.msc" e vá para> Modelos administrativos> Componentes do Windows> Windows Powershell, se nao rodar e porque
+	o Windows nao tem o painel criado. Sendo assim, baixar o arquivo (gpedit-enabler.bat) ou copie a linha de codigos abaixo em um bloco de notas e salve
+	como (GPEdit Installer.bat).
+	@echo off pushd"% ~ dp0"dir/b% SystemRoot% \ servicing \ Packages \ Microsoft-Windows-GroupPolicy-ClientExtensions-Package ~ 3 *.mum> List.txt 
+dir/b% SystemRoot% \ servicing \ Packages \ Microsoft-Windows-GroupPolicy-ClientTools-Package ~ 3 *.mum >> List.txt para/f %% i in 
+('findstr/i. List.txt 2 ^> nul') do dism/online/norestart/add-package:"% SystemRoot% \ servicing \ Packages \ %% i"pausa
+	6.4) Execute "gpedit.msc" e vá para> Modelos administrativos> Componentes do Windows> Windows Powershell
+	6.5) Procure por "Ativar execução de scripts" e defina-o como "Ativado"
+	6.6) Defina a diretiva de execução para "Permitir todos"
+	6.7) Aplique
+	6.8) Atualize seu ambiente

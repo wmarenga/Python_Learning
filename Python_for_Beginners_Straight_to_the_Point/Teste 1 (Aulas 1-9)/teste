@@ -1,0 +1,179 @@
+"""
+Pergunta 1:
+Qual estrutura abaixo é uma lista?
+
+** a) lista = [1,2,3]
+Correto! listas usam [ ]
+
+b) lista = (1,2,3,)
+c) lista = 1...2...3...
+d) lista = 1 2 3
+
+Pergunta 2:
+Como você poderia criar um dicionário com os nomes, sexo e salários de 3 pessoas?
+
+a) pessoas = {'nomes': ['Joao','Maria','Jose'] 'sexo':['M','F','M'] 'idade':[15,20,25]}
+b) pessoas = {nomes: ['Joao','Maria','Jose'], sexo:['M','F','M'], idade:[15,20,25]}
+** c) pessoas = {'nomes': ['Joao','Maria','Jose'], 'sexo':['M','F','M'], 'idade':[15,20,25]}
+d) pessoas = {'nomes': [Joao,Maria,Jose] 'sexo':['M','F','M'] 'idade':[15,20,25]}
+
+Pergunta 3:
+Como você poderia somar os 100 primeiros números pares?
+
+Atenção, não é a soma dos números pares até 100, são os 100 primeiros!
+
+a)
+soma = 0
+for i in range(0,100):
+    soma += i
+print(soma)
+
+b)
+soma = 0
+for i in range(0,100):
+    soma += i
+print(soma)
+
+***c)
+soma = 0
+contador_iteracoes = 1
+contador_pares = 1
+while contador_pares <= 100:
+    if contador_iteracoes%2==0:
+        soma += contador_iteracoes
+        contador_pares += 1
+    contador_iteracoes += 1
+print(soma)
+
+d)
+soma = 0
+contador_iteracoes = 1
+contador_pares = 1
+while contador <= 100:
+    if contador_iteracoes%2==0:
+        soma += 1
+        contador_pares += 1
+    contador_iteracoes += 1
+print(soma)
+
+
+Pergunta 4:
+Transforme o comando abaixo em uma única linha de código (inline)
+
+contador = 0
+
+contador = 0
+for i in range(0,100):
+    if i>10:
+        contador += 1
+print(contador)
+        
+a) contador = sum([1 if i>10 for i in range(0,100)])
+*** b) contador = sum([0 if i<=10 else 1 for i in range(0,100)])
+c) contador = sum([if i<=10 0 else 1 for i in range(0,100)])
+
+Pergunta 5:
+Crie uma função que retorna se um número é par ou ímpar
+
+Resultado esperado
+
+minha_funcao(10)  -->  par
+
+minha_funcao(11)  -->  ímpar
+
+a) 
+function minha_funcao(num):
+    if num%2==0:
+        return 'par'
+    return 'impar'
+
+** b)
+def minha_funcao(num):
+    if num%2==0:
+        return 'par'
+    else:
+        return 'impar'
+
+c)
+def minha_funcao(num):
+    if num/2==0:
+        return 'par'
+    else:
+        return 'impar'
+
+d)
+def minha_funcao(10):
+    if 10%2==0:
+        return 'par'
+    else:
+        return 'impar'
+
+e)
+def minha_funcao(11):
+    if 11%2==0:
+        return 'par'
+    else:
+        return 'impar'
+
+Pergunta 6:
+Tenho um desafio de exploração de dados, no qual preciso ir gerando meu código e 
+analisando os resultados. O Jupyter é mais indicado nesse caso.
+
+** a) Verdadeiro
+b) Falso
+
+Pergunta 7:
+Crie o produto (multiplicação) de todos números os números divisíveis por 7 que 
+estão entre 9 e 50
+
+a)
+produto = 0
+for i in range(9,51):
+    if i&7==0:
+        produto *= i
+print(produto)
+
+** b)
+produto = 1
+for i in range(9,51):
+    if i&7==0:
+        produto *= i
+print(produto)
+
+Resposta 4150656720
+
+c)
+produto = 1
+for i in range(9,50):
+    if i&7==0:
+        produto *= i
+print(produto)
+
+d)
+for i in range(9,51):
+    if i&7==0:
+        produto *= i
+print(produto)
+
+
+Pergunta 8:
+Considere o dicionário abaixo
+
+animais = {'nome': ['Ted','Bolota','Nara'], 'idade': [7,3,8]}
+
+'Nome' é um(a)?
+
+** a) Chave
+b) Valor
+c) Atributo
+
+Pergunta 9:
+O que está errado no dicionário abaixo?
+
+cidades = ('nome': ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte'] estado: ['SP','RJ','MG'])
+
+a) Apenas a falta da virgula antes de 'estado'
+b) A falta da virgula antes de 'estado' e o uso de () no lugar de {}
+** c) A falta da virgula antes de 'estado', o uso de () no lugar de {} e a falta de coma em 'estado'
+"""
+

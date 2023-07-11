@@ -1,0 +1,165 @@
+"""
+Pergunta 1:
+O que é um DataFrame?
+
+a) Estrutura similar a um dicionario, com mesmos recursos
+*** b) Uma estrutura especial dentro do Python, similar a uma tabela, onde podemos fazer consultas
+e filtros dos nossos dados com muita facilidade. E muito utilizado em analise de dados.
+c) Uma tabela do Pandas, usada apenas para consulta de dados.
+
+Pergunta 2:
+Qual código abaixo cria um DataFrame?
+
+a) df = {'nome':['Rafael','Joao','Maria'], 'idade':[30,20,10]}
+b) import pandas as pb
+       df = pb.Dataframe('nome':['Rafael','Joao','Maria'], 'idade':[30,20,10])
+*** c) import pandas as pb
+       df = pb.Dataframe({'nome':['Rafael','Joao','Maria'], 'idade':[30,20,10]})
+
+Pergunta 3:
+Veja o DataFrame abaixo
+
+    nome    idade
+0  Rafael    30
+1  Joao      20
+2  Maria     10
+
+O que são os números 0, 1 e 2?
+
+a) Chaves primarias da tabela
+*** b) Index do DataFrame, um identificador unico que e usado para acessar os registros e fazer conexao
+entre DataFrames
+c) Numero das linhas, mas nao e usado
+
+Pergunta 4:
+Considere o DataFrame df a seguir
+
+    nome    idade
+0  Rafael    30
+1  Joao      20
+2  Maria     10
+
+Como você adicionaria 2 registros de uma única vez?
+
+nome --> ['Ana', 'Amanda']
+
+idade --> [15, 16]
+
+Dica:
+
+- tente criar o código e teste várias vezes
+
+- cria uma variável antes de usar o comando APPEND
+
+- nessa variável, crie um DataFrame com os dados
+
+- use essa variável dentro do comando APPEND
+
+a) df = df.append({'nome'=['Ana','Amanda'],'idade'=[15,16]})
+b) df = df.append({'nome':['Ana','Amanda'],'idade':[15,16]})
+c) df = df.append({'nome'=['Ana','Amanda'],'idade'=[15,16]}, ignore_index=True)
+*** d) meus_dados = pb.Dataframe({'nome'=['Ana','Amanda'],'idade'=[15,16]})
+       df = df.append(meus_dados, ignore_index=True)
+
+Pergunta 5:
+Veja o DataFrame abaixo,
+
+
+
+df = pd.DataFrame({'nome': ['Rafael', 'João', 'Maria','Lucas','Lúcia','Ana'], 
+                   'Altura': [175,165,160,180,165,170],
+                   'sexo': ['M','M','F','M','F','F']})
+
+
+Crie um algoritmo para definir a média de altura por sexo e encontre a resposta correta
+
+*** a) M: 173,33
+       F: 165
+b) M: 170
+   F: 164
+c) M: 178,33
+   F: 165,9
+   
+import pandas as pd
+df = pd.DataFrame({'nome': ['Rafael', 'João', 'Maria','Lucas','Lúcia','Ana'], 'Altura': [175,165,160,180,165,170],'sexo': ['M','M','F','M','F','F']})
+print(df)
+print(df.groupby('sexo').Altura.mean())
+
+Pergunta 6:
+Veja o DataFrame abaixo
+
+df = pd.DataFrame({'nome': ['Rafael', 'João', 'Maria','Lucas','Lúcia','Ana'], 'Altura': [175,165,160,180,165,170],'sexo': ['M','M','F','M','F','F']})
+
+
+Crie um algoritmo para encontrar a média de altura por sexo, porém usando apenas as pessoas 
+com altura inferior a 180.
+
+a) F 165
+   M 173,33
+b) F 165
+   M 180
+*** c) F 165
+       M 170
+
+import pandas as pd
+df = pd.DataFrame({'nome': ['Rafael', 'João', 'Maria','Lucas','Lúcia','Ana'], 'Altura': [175,165,160,180,165,170],'sexo': ['M','M','F','M','F','F']})
+print(df)
+print(df[df['Altura']<180].groupby('sexo').median())
+
+Pergunta 7:
+Considere os 2 DataFrames abaixo
+
+pessoas = pd.DataFrame({'nome': ['Rafael', 'João', 'Maria','Lucas','Lúcia','Ana'],'Altura': [175,165,160,180,165,170],'sexo': ['M','M','F','M','F','F']})
+salarios = pd.DataFrame({'nome': ['João', 'Maria','Lucas','Lúcia','Ana','Rafael'], 'salario': [1000,1200,15000,11000,12000,7000]})
+
+Faça um JOIN dos 2 DataFrames, criando um DataFrame único com nome, altura, sexo e salário
+
+Dica: use set_index('nome')
+
+Tente resolver o problema antes de ver as opções abaixo
+
+a) df = pessoas.join(salarios)
+*** b) df = pessoas.set_index('nome').join(salarios.set_index('nome'))
+c) df = pessoas.join(salarios.set_index('nome'))
+
+import pandas as pd
+pessoas = pd.DataFrame({'nome': ['Rafael', 'João', 'Maria','Lucas','Lúcia','Ana'],'Altura': [175,165,160,180,165,170],'sexo': ['M','M','F','M','F','F']})
+salarios = pd.DataFrame({'nome': ['João', 'Maria','Lucas','Lúcia','Ana','Rafael'], 'salário': [1000,1200,15000,11000,12000,7000]})
+df = pessoas.set_index('nome').join(salarios.set_index('nome'))
+print(df)
+
+Pergunta 8:
+Considere o DataFrame abaixo
+
+salarios  = pd.DataFrame({'nome': ['João', 'Maria','Lucas','Lúcia','Ana','Rafael'], 'salários': [1000,1200,15000,11000,12000,7000]})
+
+Crie uma nova coluna 'classe' com os valores
+
+A --> Se "salários" > 12000
+
+B --> Se "salários" > 7000 e <= 12000
+
+C --> Outros casos
+
+Quais são os valores dessa nova coluna?
+
+a) CCABBA
+*** b) CCABBC
+c) BCABBC
+
+import pandas as pd
+df  = pd.DataFrame({'nome': ['João', 'Maria','Lucas','Lúcia','Ana','Rafael'], 'salarios': [1000,1200,15000,11000,12000,7000]})
+print(df)
+
+df['classe'] = 'A'
+print(df)
+
+df.loc[df['salarios'] > 12000, 'classe'] = 'A'
+df.loc[(df['salarios'] <= 12000) & (df['salarios'] > 7000), 'classe'] = 'B'
+df.loc[df['salarios'] <= 7000, 'classe'] = 'C'
+
+print(df)
+
+"""
+
+

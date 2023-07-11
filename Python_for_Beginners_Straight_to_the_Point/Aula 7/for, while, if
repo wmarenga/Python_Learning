@@ -1,0 +1,48 @@
+"""
+1) FOR:
+
+nomes = ['Rafael', 'Maria', 'Ana']
+idades = [10,20,15]
+sexo = ('M','F','O')
+cadastro = {'nomes': nomes,'idades':idades,'cidade':['A','B','C']}
+
+for nome in nomes:
+    print(nome)
+
+** Lemos: para nome (valores dentro da variavel 'nomes'), exibir valores da variavel 'nomes'
+
+# Saida <Rafael
+#              Maria
+#              Ana>
+
+2) IF:
+
+for idade in idades:
+    if idade%2==0: 
+    print(idade)
+
+# Saida <10 20>
+for i in range(0,10):
+    print(i)
+
+** O numero 10 nao aparece, pois nao esta incluido.
+
+#Saida <0 1 2 3 4 5 6 7 8 9>
+
+3) WHILE:
+
+i = 0
+idade = idades[i]
+while idade <= 10:
+    print(idade)
+    i += 1
+    idade = idades[i]
+
+"""
+
+nomes = ['Rafael', 'Maria', 'Ana']
+idades = [10,20,15]
+sexo = ('M','F','O')
+cadastro = {'nomes': nomes,'idades':idades,'cidade':['A','B','C']}
+for idade in idades:
+    if idade%2==0: print(idade)
