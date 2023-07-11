@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: pandaSDMX
+Version: 0.9
+Summary: A client for SDMX - Statistical Data and Metadata eXchange
+Home-page: https://github.com/dr-leo/pandasdmx
+Author: Dr. Leo
+Author-email: fhaxbox66@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Requires-Dist: jsonpath-rw
+Requires-Dist: lxml
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: setuptools
+
+=============
+
+
