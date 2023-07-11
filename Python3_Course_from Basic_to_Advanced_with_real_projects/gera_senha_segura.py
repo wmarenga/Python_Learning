@@ -1,10 +1,19 @@
-from random import choice
+import secrets
 import string
 
-tamanho_senha = int(input('Quantos digitos terá a senha?": '))
-caracteres = string.ascii_letters + string.digits + string.punctuation
-senha_segura = ''
-for i in range(tamanho_senha):
-    senha_segura += choice(caracteres)
+password_question = int(
+    input('How many characters do you want to generate?": '))
+complexity_question = int(
+    input('what is the level of complexity of the characters?": '))
+safe_password = ''
 
-print(f"A sua senha segura é: {senha_segura}")
+
+def complexity(q):
+    return secrets.choice(str(secrets.token_bytes(q)) + string.ascii_letters + str(
+        secrets.token_urlsafe(q)) + string.digits + str(secrets.token_hex(q)) + string.punctuation)
+
+
+for i in range(password_question):
+    safe_password += complexity(complexity_question)
+
+print(f"Your safe password is: {safe_password}")

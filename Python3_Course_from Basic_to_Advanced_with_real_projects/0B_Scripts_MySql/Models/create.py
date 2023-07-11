@@ -1,0 +1,2 @@
+class create():
+    pass
