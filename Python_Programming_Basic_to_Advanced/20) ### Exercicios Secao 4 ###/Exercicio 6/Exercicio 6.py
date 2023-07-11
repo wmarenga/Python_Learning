@@ -1,0 +1,7 @@
+"""
+Exercicio 6:
+
+Leia uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit. A formula de
+conversao e: F = C*(9.0/5.0)+32.0, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.
+"""
+1. Faça um programa que leia um número inteiro e o imprima.  2. Faça um programa que leia um número real e o imprima.  3. Peça ao usuário para digitar três valores inteiros e imprima a soma deles.  4. Leia um número real e imprima o resultado do quadrado desse número.  5. Leia um número real e imprima a quinta parte deste número.  6. Leia uma temperatura em graus Celsius e um presente-a convertido em graus Fahrenheit.  Uma fórmula de conversação: F = C (9.0/5.0)+32.0, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.  7. Leia uma temperatura em graus Fahrenheit e apresente-a convertida em graus Celsius.  A fórmula de conversão é: C = 5.0 * (F32.0)/9.0, sendo C a temperatura em Celsius e Fa temperatura em Fahrenheit.  8. Leia uma temperatura em graus Kelvin e apresente-a convertida em graus Celsius.  A fórmula de conversão: C = K273.15, sendo C a temperatura em Celsius e Ka temperatura em Kelvin.  9. Leia uma temperatura em graus Celsius e apresente-a convertida em graus Kelvin.  A conversão é a fórmula: K = C + 273,15, sendo C uma temperatura em Celsius e K uma temperatura em Kelvin.  10. Leia uma velocidade em km/h (quilômetros por hora) e apresente-a convertida em m/s (metros por segundo).  Uma fórmula de conversação: M-K/3.6, sendo K a velocidade em km/h e M em m/s
