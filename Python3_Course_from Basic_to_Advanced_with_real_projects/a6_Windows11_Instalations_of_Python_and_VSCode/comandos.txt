@@ -1,0 +1,28 @@
+# WINDOWS
+
+Python Install:
+https://www.python.org/downloads/
+
+VSCode Install:
+https://code.visualstudio.com/download
+
+Commands:
+
+Python Version:
+python --Version
+py --Version
+
+** PowerShell accept Linux commands.
+
+Execution Policy:
+Get-ExecutionPolicy (Restricted)
+
+Release ExecutionPolicy:
+Set-ExecutionPolicy AllSigned Unrestricted -Force (Don't inform nothing after commands execution)
+Set-ExecutionPolicy AllSigned -Force
+
+Venv Criation:
+python -m venv PythonCourse
+.\env\Scripts\activate
+
+.\env\Scripts\deactivate

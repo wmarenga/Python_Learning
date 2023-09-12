@@ -1,0 +1,46 @@
+# LINUX E MAC
+
+Instalations:
+https://brew.sh (packages management)
+brew update
+brew upgrade
+brew search htop (to find)
+brew install htop (to install)
+
+https://github.com/pyenv/pyenv (environment manager)
+brew update
+brew install pyenv
+
+eval "$(pyenv init -)
+
+Zsh terminal:
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+
+pyenv versions available:
+pyenv install -l
+** Select the last stable version (without extra info after the version number)
+
+To Install:
+pyenv install 3.10.7
+
+To define Python global:
+pyenv global 3.10.7
+python --version (Python 3.10.7)
+python3 --version (Python 3.10.7)
+
+cat ~/.zshrc (configuration Zsh file)
+Alternative (mac commands line):
+xcode-select --install
+
+To install VSCode:
+brew update
+brew install visual-studio-code
+
+# Acesse a pasta do projeto
+cd caminho/do/projeto
+sudo apt-get install python3-venv
+python3 -m venv env
+source env/bin/activate
+deactivate

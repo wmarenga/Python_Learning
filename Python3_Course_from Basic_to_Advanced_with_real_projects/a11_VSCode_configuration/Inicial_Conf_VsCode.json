@@ -6,8 +6,9 @@
     "editor.fontSize": 18,
     "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
     "code-runner.executorMap": {
-        "python": "clear ; python -u",
+        "python": "clear ; python -u"
     },
     "code-runner.runInTerminal": true,
-    "code-runner.ignoreSelection": true
+    "code-runner.ignoreSelection": true,
+    "python.defaltInterpreterPath": "python"
 }
