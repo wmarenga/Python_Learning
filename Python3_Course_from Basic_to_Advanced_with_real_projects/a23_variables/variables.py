@@ -52,5 +52,5 @@ print(age * height)
 weight = 80
 height = 1.80
 imc = weight / (height ** 2)
-print(f'The {name} have {age} years old and your IMC is {imc:.2f}.')
+print(f'The {name} has {age} years old and your IMC is {imc:.2f}.')
 """
