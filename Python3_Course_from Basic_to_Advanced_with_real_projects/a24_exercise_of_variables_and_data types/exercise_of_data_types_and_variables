@@ -1,0 +1,18 @@
+from datetime import datetime
+
+first_name = 'Luiz Otávio'
+last_name = 'Miranda'
+age = 18
+year_of_birth = datetime.today().year - age
+height_in_meters = 1.80
+
+
+def legal_age(age): return "Yes" if age >= 18 else "No"
+
+
+print('Name:', first_name)
+print('Surname:', last_name)
+print('Age:', age)
+print('Year_of_birth:', year_of_birth)
+print('Is legal age?', legal_age(age))
+print('Height_in_meters:', height_in_meters)
