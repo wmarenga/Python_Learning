@@ -1,22 +1,20 @@
 """
-Funções Built-in:
+Built-in Functions:
 
-Documentação:
+Documentation:
 https://docs.python.org/3/library/stdtypes.html
-
 
 https://github.com/luizomf/check-numbers-python/blob/master/chk_numbers.py
 
-# isnumeric(), isdigit() e isdecimal() => retornam o mesmo resultado.
+# isnumeric(), isdigit() and isdecimal() => return the same result.
 
-# Números e positivos (123456789)
-# Obs: Se for float ou qualquer outro valor negativo, ele retorna false.
+# Numbers and positives (123456789)
+# Obs: Note: If it is a float or any other negative value, it returns false.
 # print(num1.isnumeric())
 # print(num2.isnumeric())
 
-
-num1 = input('Digite um número: ')
-num2 = input('Digite outro número: ')
+num1 = input('Type one number: ')
+num2 = input('Type another number: ')
 
 while True:
     if num1.isdigit() and num2.isdigit():
@@ -24,11 +22,11 @@ while True:
         break
     else:
         print('Digite um valor válido!')
-        num1 = input('Digite um número: ')
-        num2 = input('Digite outro número: ')
+        num1 = input('Type one number: ')
+        num2 = input('Type another number: ')
 
 
-# Se quisermos converter qualquer número (Soluçao professor):
+# If we want to convert any number (Teacher Solution):
 
 import re
 
@@ -69,8 +67,8 @@ print(is_number('-1010.112'))  # True
 # False
 print(is_number('123a'))  # False
 
-num1 = input('Digite um número: ')
-num2 = input('Digite um número: ')
+num1 = input('Type one number: ')
+num2 = input('Type one number: ')
 
 if is_number(num1) and is_number(num2):
     num1 = float(num1)
@@ -80,10 +78,10 @@ if is_number(num1) and is_number(num2):
 else:
     print('ERROR')
 
-# Utilizando try/ except:
+# Using try/ except:
 
-num1 = input('Digite um número: ')
-num2 = input('Digite um número: ')
+num1 = input('Type one number: ')
+num2 = input('Type one number: ')
 
 try:
     num1 = float(num1)
