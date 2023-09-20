@@ -1,55 +1,65 @@
 """
-Split and Join em Python:
+Split and join with list and str in Python:
 
-- split     => Tem a função de dividir uma string (str);
-- join      => Tem a função de juntar uma lista (str);
+- split     => It has the function of dividing a string (str);
+- join      => It has the function of joining a list (str);
 
 """
-string = 'O Brasil é o país do futebol, o Brasil é penta.'
+# # *Example 1 (Creating a list from a string by spaces):
+# string = 'Brazil is the country of football, Brazil is five times winner.'
+# my_list_1 = string.split(' ')  # by the blank spaces
+# print(my_list_1)
+# my_list_2 = string.split(',')  # by the commas
+# print(my_list_2)
 
-# Criando uma lista de uma string (pelos espaços)
-lista_1 = string.split(' ')  # pelos espaços em branco
-print(lista_1)
-lista_2 = string.split(',')
-print(lista_2)
+# # *Example 2 (Iterating over my_list 1):
+# for n in my_list_1:
+#     print(n)
 
-# Iterando sobre a lista 1:
-for n in lista_1:
-    print(n)
+# # *Example 3 (Counting words):
+# for n in my_list_1:
+#     print(f'The word {n} appeared {my_list_1.count(n)} times in the phrase.')
 
-# Contando palavras
-for n in lista_1:
-    print(f'A palavra {n} apareceu {lista_1.count(n)}X na frase.')
+# # *Example 4:
+# string = 'Brazil is the country of football, Brazil is five times winner.'
+# my_list_1 = string.split(' ')
 
-Exemplo 2:
+# word = ''
+# counting = 0
+# for n in my_list_1:
+#     qtt_times = my_list_1.count(n)
+#     if qtt_times > counting:
+#         counting = qtt_times
+#         word = n
 
-string = 'O Brasil é o país do futebol, o Brasil é penta.'
-lista_1 = string.split(' ')
+# print(f'The word that appeared most often is: {word} => {counting} times')
 
-palavra = ''
-contagem = 0
-for n in lista_1:
-    qtd_vezes = lista_1.count(n)
-    if qtd_vezes > contagem:
-        contagem = qtd_vezes
-        palavra = n
+# # *Examplo 5 (strip = Remove spaces from the beginning and end of the string):
+# #! Note: lstrip (remove all left space)/ rstrip (remove all right space)
+# string = 'Brazil is the country of football, Brazil is five times winner.'
+# my_list_1 = string.split(' ')
 
-print(f'A palavra que apareceu mais vezes é: {palavra} ({contagem}X)')
+# for n in my_list_1:
+#     print(n.strip().capitalize())
 
-Exemplo:
+# # *Examplo 6 (Inserting each word of a string into a list)
+# string = 'Brazil is five times winner.'
+# my_list = string.split(' ')
+# # print(my_list)
 
-string = 'O Brasil é o país do futebol, o Brasil é penta.'
-lista_1 = string.split(' ')
+# # *Examplo 7 (Creating a string with the elements of a my_list with (join))
+# string2 = ' '.join(my_list)
+# print(string2)
 
-for n in lista_1:
-    # Remove espaços do início e do final da string.
-    print(n.strip().capitalize())
+# * Example 8:
+phrases = '   Look what   , interesting thing          '
+my_list_raw_phrases = phrases.split(',')
 
-# Inserindo cada palavra de uma string em uma lista
-string = 'O Brasil é penta.'
-lista = string.split(' ')
-print(lista)
+my_list_phrases = []
+for i, phrases in enumerate(my_list_raw_phrases):
+    my_list_phrases.append(my_list_raw_phrases[i].strip())
 
-# Criando uma string com os elementos de uma lista com (join)
-string2 = ' '.join(lista)
-print(string2)
+print(my_list_raw_phrases)
+print(my_list_phrases)
+joined_phrases = ', '.join(my_list_phrases)
+print(joined_phrases)
