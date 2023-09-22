@@ -1,5 +1,5 @@
 """
-Gerador de CPF:
+CPF Generator:
 
 CPF = 168.995.350-90
 ___________________________________________________
@@ -16,22 +16,23 @@ ___________________________________________________
         297             #                 343
 11 - (297 % 11) = 11    #        11 - (343 % 11) = 9
 11 > 9 = 0              #
-Digito 1 = 0            #       Digito 2 = 9
+Digit 1 = 0            #       Digit 2 = 9
 """
 from random import randint
 
-while True:
-    # Descobrindo os dígito:
-    cpf_parc = str(randint(100000000, 999999999))
 
-    def digito(mult, start_mult, cpf, passagem=1):
-        somatorio = 0
+while True:
+    # Discovering the digits:
+    partial_cpf = str(randint(100000000, 999999999))
+
+    def digit(mult, start_mult, cpf, passing=1):
+        summatory = 0
         while mult in range(start_mult, 1, -1):
             for c in cpf:
-                somatorio += int(c) * mult
+                summatory += int(c) * mult
                 mult -= 1
-        if passagem == 1:
-            dig = 11 - (somatorio % 11)
+        if passing == 1:
+            dig = 11 - (summatory % 11)
             if dig > 9:
                 dig = 0
                 return cpf + str(dig)
@@ -39,7 +40,7 @@ while True:
             else:
                 return cpf + str(dig)
         else:
-            dig = 11 - (somatorio % 11)
+            dig = 11 - (summatory % 11)
             if dig > 9:
                 dig = 9
                 return cpf + str(dig)
@@ -47,16 +48,17 @@ while True:
             else:
                 return cpf + str(dig)
 
-    cpf_valido = digito(11, 11, digito(10, 10, cpf_parc), passagem=2)
+    valid_cpf = digit(11, 11, digit(10, 10, partial_cpf), passing=2)
 
     print(
-        f'O CPF válido é: {cpf_valido[0:3]}.{cpf_valido[3:6]}.{cpf_valido[6:9]}-{cpf_valido[9:11]}')
+        f'The valid CPF is: {valid_cpf[0:3]}.{valid_cpf[3:6]}.{valid_cpf[6:9]}-{valid_cpf[9:11]}')
 
-    decisao = input('Quer gerar outro CPF? [S]im ou [N]ão: ').upper()
+    decision = input(
+        'Do you want to generate another CPF? [Y]es or [N]o: ').upper()
 
-    while decisao not in 'SN':
-        decisao = input('Digite somente [S] ou [N]: ').upper()
-    if decisao == 'S':
+    while decision not in 'YN':
+        decision = input('Type only [Y] or [N]: ').upper()
+    if decision == 'Y':
         continue
     else:
         break

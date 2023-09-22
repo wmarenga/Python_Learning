@@ -1,5 +1,5 @@
 """
-Gerador de CPF:
+CPF Generator:
 
 CPF = 168.995.350-90
 ___________________________________________________
@@ -16,53 +16,55 @@ ___________________________________________________
         297             #                 343
 11 - (297 % 11) = 11    #        11 - (343 % 11) = 9
 11 > 9 = 0              #
-Digito 1 = 0            #       Digito 2 = 9
+Digit 1 = 0            #       Digit 2 = 9
 """
 from random import randint
 
+
 while True:
-    cpf_aleatorio = str(randint(0, 999999999))
-    soma_parcial1 = 0
-    soma_parcial2 = 0
+    cpf_random = str(randint(0, 999999999))
+    partial_sum1 = 0
+    partial_sum2 = 0
     n1 = 10
     n2 = 11
 
-    # Descobrindo o primeiro dígito:
+    # Finding the first digit:
 
     while n1 in range(10, 1, -1):
-        for cp in cpf_aleatorio:
-            soma_parcial1 += int(cp) * n1
+        for cp in cpf_random:
+            partial_sum1 += int(cp) * n1
             n1 -= 1
 
-    dig1 = 11 - (soma_parcial1 % 11)
+    dig1 = 11 - (partial_sum1 % 11)
     if dig1 > 9:
         dig1 = 0
-        cpf_validacao1 = cpf_aleatorio + str(dig1)
+        cpf_validation1 = cpf_random + str(dig1)
     else:
-        cpf_validacao1 = cpf_aleatorio + str(dig1)
+        cpf_validation1 = cpf_random + str(dig1)
 
-    # Descobrindo o segundo dígito
+    # Finding the second digit
 
     while n2 in range(11, 1, -1):
-        for cp in cpf_validacao1:
-            soma_parcial2 += int(cp) * n2
+        for cp in cpf_validation1:
+            partial_sum2 += int(cp) * n2
             n2 -= 1
 
-    dig2 = 11 - (soma_parcial2 % 11)
+    dig2 = 11 - (partial_sum2 % 11)
     if dig2 > 9:
         dig2 = 9
-        cpf_validacao2 = cpf_validacao1 + str(dig2)
+        cpf_validation2 = cpf_validation1 + str(dig2)
     else:
-        cpf_validacao2 = cpf_validacao1 + str(dig2)
+        cpf_validation2 = cpf_validation1 + str(dig2)
 
     print(
-        f'O CPF válido é: {cpf_validacao2[0:3]}.{cpf_validacao2[3:6]}.{cpf_validacao2[6:9]}-{cpf_validacao2[9:12]}')
+        f'The valid CPF is: {cpf_validation2[0:3]}.{cpf_validation2[3:6]}.{cpf_validation2[6:9]}-{cpf_validation2[9:12]}')
 
-    decisao = input('Quer gerar outro CPF? [S]im ou [N]ão: ').upper()
+    decisao = input(
+        'Do you want to generate another CPF? [Y]es or [N]o: ').upper()
 
-    while decisao not in 'SN':
-        decisao = input('Digite somente [S] ou [N]: ').upper()
-    if decisao == 'S':
+    while decisao not in 'YN':
+        decisao = input('Type only [Y] ou [N]: ').upper()
+    if decisao == 'Y':
         continue
     else:
         break

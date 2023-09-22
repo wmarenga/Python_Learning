@@ -138,6 +138,26 @@ my_list.append(70)
 last_value = my_list.pop(3) # Removing elements of a specific index
 print(my_list, 'removed,', last_value)
 
+# *Lista de listas e seus índices
+
+names = [
+    # 0        1
+    ['Maria', 'Helena', ],  # 0
+    # 0
+    ['Elaine', ],  # 1
+    # 0        1         2              3
+    ['Luiz', 'João', 'Eduarda', (0, 10, 20, 30, 40)],  # 2
+]
+
+# print(names[1][0])
+# print(names[0][1])
+# print(names[2][2])
+# print(names[2][3][3])
+
+for n in names:
+    print(f'The name is {n}')
+    for itens in n:
+        print(itens)
 """
 # Display the highest value of my_list with max
 

@@ -1,24 +1,22 @@
-# Invertendo valores de variáveis
-from tkinter import W
-
+# Inverting variable values
 
 x = 10
 y = 'Luiz'
 
-# Em outras linguagens
+# In other languages
 z = x
 x = y
 y = z
 print(f'x = {x} e y = {y}')
 
-# Em Python é muito mais simples
+# In Python it is much simpler
 
 a = 20
 b = "Wellington"
 a, b = b, a
 print(f'a = {a} e b = {b}')
 
-# Embaralhando 3 variáveis
+# Shuffling 3 variables
 
 w = 10
 q = "Renata"
