@@ -256,3 +256,50 @@ import copy
 
 # d2.update(d5)  # Will include d5 in d2 (concatenating the 2)
 # print(d2)
+
+#! Dictionaries Packing and unpacking:
+a, b = 1, 2
+a, b = b, a
+# print(a, b)
+
+
+# (a1, a2), (b1, b2) = people.items()
+# print(a1, a2)
+# print(b1, b2)
+
+# for key, value in people.items():
+#     print(key, value)
+
+people = {
+    'name': 'Aline',
+    'surname': 'Souza',
+}
+
+people_data = {
+    'age': 16,
+    'height': 1.6,
+}
+
+people_complete = {**people, **people_data}
+people_complete = {**people, 'name': 'Jose'}  # Add more items
+# print(people_complete)
+
+
+def shows_named_arguments(*args, **kwargs):
+    print('NOT NAMED:', args)
+
+    for key, value in kwargs.items():
+        print(key, value)
+
+
+shows_named_arguments(1, 2, name='Joana', qlq=123)
+# shows_named_arguments(**people_complete)
+
+configurations = {
+    'arg1': 1,
+    'arg2': 2,
+    'arg3': 3,
+    'arg4': 4,
+}
+
+shows_named_arguments(**configurations)
