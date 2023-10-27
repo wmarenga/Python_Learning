@@ -88,12 +88,40 @@ List Comprehension:
 
 #! Example 10:
 
-line_column = [
-    (x, y)
-    if y != 2 else (x, y * 1000)
-    for x in range(1, 11)
-    for y in range(1, 6)
-    if x != 2
-]
+# line_column = [
+#     (x, y)
+#     if y != 2 else (x, y * 1000)
+#     for x in range(1, 11)
+#     for y in range(1, 6)
+#     if x != 2
+# ]
 
-print(line_column)
+# print(line_column)
+
+#! Example 11:
+
+# names = ['Luiz', 'Maria', 'Helena', 'Joana', 'Felipe']
+
+# new_names_lower = [name.lower() for name in names]
+# print(new_names_lower)
+
+# new_names_title = [name.title() for name in new_names_lower]
+# print(new_names_title)
+
+# new_names_upper = [name.upper() for name in names]
+# print(new_names_upper)
+
+# new_names_last_upper = [name[::-1].title()[::-1] for name in names]
+# print(new_names_last_upper)
+
+# new_names_last_upper2 = [
+#     f'{name[:-1].lower()}{name[-1].upper()}' for name in names]
+# print(new_names_last_upper2)
+
+#! Example 11 (flat list):
+
+numbers = [[number, number ** 2] for number in range(10)]
+flat_list = [x for x in numbers for y in x]  # lists inside list
+flat_list = [y for x in numbers for y in x]  # only numbers inside the list
+print(numbers)
+print(flat_list)

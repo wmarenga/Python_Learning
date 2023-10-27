@@ -1,17 +1,16 @@
-"""
-numeros = [1, 2, 3, 4, 5]
-novos_numeros = [numero for numero in numeros]
-print(numeros)
-print(novos_numeros)
+numbers = [1, 2, 3, 4, 5]
+new_numbers = [number for number in numbers]
+print(numbers)
+print(new_numbers)
 
-# Criamdo uma nova lista dividindo por 2
-divisao = [numero / 2 for numero in numeros]
-print(numeros)
+#! Criando uma nova lista dividindo por 2:
+divisao = [number / 2 for number in numbers]
+print(numbers)
 print(divisao)
 
-# Criamdo uma nova lista multiplicacao por 2
-multiplicacao = [numero * 2 for numero in numeros]
-print(numeros)
+#! Criando uma nova lista multiplicacao por 2
+multiplicacao = [number * 2 for number in numbers]
+print(numbers)
 print(multiplicacao)  # Criamdo uma nova lista multiplicada por 2
 
 # Podemos também atribuir a funções para que possamos utilizar em todo o código
@@ -29,29 +28,29 @@ def potentiation(x, y):
     return x ** y
 
 
-numeros = [1, 2, 3, 4, 5]
-division_list = [division(numero, 2) for numero in numeros]
+numbers = [1, 2, 3, 4, 5]
+division_list = [division(number, 2) for number in numbers]
 
-multiplication_list = [multiplication(numero, 2) for numero in numeros]
+multiplication_list = [multiplication(number, 2) for number in numbers]
 
-potentiation_list = [potentiation(numero, 2) for numero in numeros]
+potentiation_list = [potentiation(number, 2) for number in numbers]
 
-print(numeros)
+print(numbers)
 print(division_list)
 print(multiplication_list)
 print(potentiation_list)
 
 # Filtrando os valores com list comprehension (condicionais)
 
-numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-novos_numeros = [numero for numero in numeros if numero > 5]
-impares_odd = [numero for numero in numeros if numero % 2 != 0]
-pares_even = [numero for numero in numeros if numero % 2 == 0]
-outro_if = [numero if numero !=
-            6 else 600 for numero in pares_even]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+new_numbers = [number for number in numbers if number > 5]
+impares_odd = [number for number in numbers if number % 2 != 0]
+pares_even = [number for number in numbers if number % 2 == 0]
+outro_if = [number if number !=
+            6 else 600 for number in pares_even]
 
-print(numeros)
-print(novos_numeros)
+print(numbers)
+print(new_numbers)
 print(impares_odd)
 print(pares_even)
 print(outro_if)
@@ -89,15 +88,15 @@ print(nova_string)
 
 # Pegando grupos de letras pulando de 2 em 2
 string = 'Wellington Marenga'
-numero_de_letras = 3
-nova_string = [string[indice:indice + numero_de_letras]
+number_de_letras = 3
+nova_string = [string[indice:indice + number_de_letras]
                for indice in range(0, len(string), 2)]
 
 # Se quisermos separar com ponto
-nova_string = '.'.join([string[indice:indice + numero_de_letras]
+nova_string = '.'.join([string[indice:indice + number_de_letras]
                         for indice in range(0, len(string), 2)])
 print(nova_string)
-"""
+
 # Trabalhando com string dentro de listas
 nomes = ['Luiz', 'Maria', 'Helena', 'Joana', 'Felipe']
 novos_nomes = [nome for nome in nomes]
@@ -120,7 +119,7 @@ ultima_maiusc = [f'{nome[:-1].lower()}{nome[-1].upper()}' for nome in nomes]
 print(ultima_maiusc)
 
 # Uma única lista dentro de uma lista
-numeros = [[numero, numero ** 2] for numero in range(10)]
-flat = [y for x in numeros for y in x]
-print(numeros)
+numbers = [[number, number ** 2] for number in range(10)]
+flat = [y for x in numbers for y in x]
+print(numbers)
 print(flat)
