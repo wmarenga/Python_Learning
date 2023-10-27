@@ -3,17 +3,17 @@ new_numbers = [number for number in numbers]
 print(numbers)
 print(new_numbers)
 
-#! Criando uma nova lista dividindo por 2:
-divisao = [number / 2 for number in numbers]
+#! Creating a new list by dividing by 2:
+division = [number / 2 for number in numbers]
 print(numbers)
-print(divisao)
+print(division)
 
-#! Criando uma nova lista multiplicacao por 2
-multiplicacao = [number * 2 for number in numbers]
+#! Creating a new list multiplication by 2
+multiplication = [number * 2 for number in numbers]
 print(numbers)
-print(multiplicacao)  # Criamdo uma nova lista multiplicada por 2
+print(multiplication)
 
-# Podemos também atribuir a funções para que possamos utilizar em todo o código
+#! We can also assign functions so that we can use them throughout the code:
 
 
 def division(x, y):
@@ -40,85 +40,85 @@ print(division_list)
 print(multiplication_list)
 print(potentiation_list)
 
-# Filtrando os valores com list comprehension (condicionais)
+#! Filtering values with list comprehension (conditionals):
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 new_numbers = [number for number in numbers if number > 5]
-impares_odd = [number for number in numbers if number % 2 != 0]
-pares_even = [number for number in numbers if number % 2 == 0]
-outro_if = [number if number !=
-            6 else 600 for number in pares_even]
+odd_numbers = [number for number in numbers if number % 2 != 0]
+even_numbers = [number for number in numbers if number % 2 == 0]
+other_if = [number if number !=
+            6 else 600 for number in even_numbers]
 
 print(numbers)
 print(new_numbers)
-print(impares_odd)
-print(pares_even)
-print(outro_if)
+print(odd_numbers)
+print(even_numbers)
+print(other_if)
 
-# Usando aninhamento com list comprehension
+#! Using nesting with list comprehension:
 
-combinacoes = []
-for x in range(3):  # 3 linhas
-    for y in range(2):  # 2 colunas
-        combinacoes.append((x, y))
-print(combinacoes)
+combinations = []
+for x in range(3):  # 3 lines
+    for y in range(2):  # 2 columns
+        combinations.append((x, y))
+print(combinations)
 
-# com list comprehension
-combinacoes = [(x, y) for x in range(3) for y in range(2)]
-print(combinacoes)
+#! With list comprehension:
+combinations = [(x, y) for x in range(3) for y in range(2)]
+print(combinations)
 
-# Se quisermos pular valores
-combinacoes = [(x, y) for x in range(3) for y in range(3) if x != 2]
-print(combinacoes)
+#! If we want to skip values:
+combinations = [(x, y) for x in range(3) for y in range(3) if x != 2]
+print(combinations)
 
-# Se o y for diferente de 2 exibe, caso contrario multiplicar por 1000
-combinacoes = [(x, y) if y != 2 else (x, y * 1000) for x in range(3)
-               for y in range(3) if x != 2]
-print(combinacoes)
+#! If the y is different of 2, display it, otherwise multiply by 1000:
+combinations = [(x, y) if y != 2 else (x, y * 1000) for x in range(3)
+                for y in range(3) if x != 2]
+print(combinations)
 
-# Manipulando strings
+#! Manipulating strings:
 string = 'Wellington Marenga'
-nova_string = [letra for letra in string]
-print(nova_string)
+new_string = [letter for letter in string]
+print(new_string)
 
-# Unindo novamente e string
+#! Joining again and string:
 string = 'Wellington Marenga'
-nova_string = ''.join([letra for letra in string])
-print(nova_string)
+new_string = ''.join([letter for letter in string])
+print(new_string)
 
-# Pegando grupos de letras pulando de 2 em 2
+#! Getting groups of letters jumping 2 by 2:
 string = 'Wellington Marenga'
-number_de_letras = 3
-nova_string = [string[indice:indice + number_de_letras]
-               for indice in range(0, len(string), 2)]
+number_of_letters = 3
+new_string = [string[index:index + number_of_letters]
+              for index in range(0, len(string), 2)]
 
-# Se quisermos separar com ponto
-nova_string = '.'.join([string[indice:indice + number_de_letras]
-                        for indice in range(0, len(string), 2)])
-print(nova_string)
+#! If we want to separate with a dot:
+new_string = '.'.join([string[index:index + number_of_letters]
+                       for index in range(0, len(string), 2)])
+print(new_string)
 
-# Trabalhando com string dentro de listas
-nomes = ['Luiz', 'Maria', 'Helena', 'Joana', 'Felipe']
-novos_nomes = [nome for nome in nomes]
-print(novos_nomes)
+#! Working with strings inside lists:
+names = ['Luiz', 'Maria', 'Helena', 'Joana', 'Felipe']
+new_names = [names for names in names]
+print(new_names)
 
-# Deixar minúsculo
-novos_nomes_min = [nome.lower() for nome in nomes]
-print(novos_nomes_min)
+#! Leave it lowercase:
+new_names_lower = [names.lower() for names in names]
+print(new_names_lower)
 
-# Primeiras letras maiusculas
-novos_nomes_maiusc = [nome.title() for nome in nomes]
-print(novos_nomes_maiusc)
+#! First capital letters:
+new_names_upper = [names.title() for names in names]
+print(new_names_upper)
 
-# Todas as letras maiusculas
-novos_nomes_todas_maiusc = [nome.upper() for nome in nomes]
-print(novos_nomes_todas_maiusc)
+#! All capital letters:
+new_names_all_upper = [names.upper() for names in names]
+print(new_names_all_upper)
 
-# Deixando a última letra maiuscula
-ultima_maiusc = [f'{nome[:-1].lower()}{nome[-1].upper()}' for nome in nomes]
-print(ultima_maiusc)
+#! Leaving the last letter capitalized:
+last_upper = [f'{names[:-1].lower()}{names[-1].upper()}' for names in names]
+print(last_upper)
 
-# Uma única lista dentro de uma lista
+#! A single list within a list:
 numbers = [[number, number ** 2] for number in range(10)]
 flat = [y for x in numbers for y in x]
 print(numbers)
