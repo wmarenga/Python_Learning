@@ -10,7 +10,7 @@ It does not recognize folders and modules above __main__ by default;
 - Python knows all modules and paths packages present in the sys.path.
 
 """
-#! Example 1:
+# ! Example 1:
 import calculations
 import sys
 
@@ -20,7 +20,7 @@ import sys
 print(*sys.path, sep='\n')
 print('This module is called: ', __name__)
 
-#! Example 2:
+# ! Example 2:
 # # Import everything within calculations
 
 # from other import say_hi

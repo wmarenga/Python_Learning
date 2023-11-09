@@ -4,7 +4,7 @@ raise - throwing exceptions (errors):
 Documentation:
 https://docs.python.org/3/library/exceptions.html#built-in-exceptions
 """
-#! Example 1:
+# ! Example 1:
 
 
 def not_accepted_zero(d):
@@ -32,7 +32,7 @@ def divide(n, d):
 
 print(divide(8, 0))
 
-#! Example 2
+# ! Example 2
 
 
 # def divide(n1, n2):
@@ -48,7 +48,7 @@ print(divide(8, 0))
 # except ZeroDivisionError as error:
 #     print(error)
 
-#! Custom example 3:
+# ! Custom example 3:
 
 
 # def divide(n1, n2):
