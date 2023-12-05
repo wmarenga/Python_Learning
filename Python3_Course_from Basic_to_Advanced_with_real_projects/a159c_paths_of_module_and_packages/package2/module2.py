@@ -1,4 +1,7 @@
-# Com este template conseguimos importar arquivos de outros módulos
+# With this template we can import files from other modules.
+
+from package1.module1 import variable1
+variable2 = 'variable2'
 
 try:
     import sys
@@ -9,12 +12,9 @@ try:
             os.path.join(
                 os.path.dirname(__file__),
                 '../'
-                # ../../ (duas pastas anteriores = acima)
+                # ../../ (previous two folders = above)
             )
         )
     )
 except ImportError:
     raise
-
-from pacote1.modulo1 import variavel1
-variavel2 = 'variavel2'
