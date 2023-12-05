@@ -1,5 +1,5 @@
 from lesson_158_package.module import say_hi, sum_of_module
-from sys import path
+# from sys import path
 
 import lesson_158_package.module
 from lesson_158_package import module
