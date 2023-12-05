@@ -9,9 +9,9 @@ def multiplication(x, y):
 
 
 def function_creation(my_function, y):
-    def internal(x):
+    def postponing_function(x):
         return my_function(x, y)
-    return internal
+    return postponing_function
 
 
 sum_with_five = function_creation(my_sum, 5)
