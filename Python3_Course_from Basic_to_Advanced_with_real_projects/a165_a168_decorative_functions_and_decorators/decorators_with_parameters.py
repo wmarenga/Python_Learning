@@ -7,7 +7,7 @@ def decorators_factory(a=None, b=None, c=None):
             print('Decorator parameters, ', a, b, c)
             print('Nested')
             res = func(*args, **kwargs)
-            return res
+            return float(res)
         return nested
     return functions_factory
 
