@@ -11,13 +11,17 @@ my_list_b    = [1, 2, 3, 4]
 *** result ***
 summed_lists  = [2, 4, 6, 8]
 """
-from itertools import zip_longest
+
+# Solution 1:
+
+# from itertools import zip_longest
+
 my_list_a = [10, 2, 3, 40, 5, 6, 7]
 my_list_b = [1, 2, 3, 4]
-summed_lists = [x + y for x, y in zip(my_list_a, my_list_a)]
+summed_lists = [x + y for x, y in zip(my_list_a, my_list_b)]
 
 # Creates a list of tuples with the values of my_list_a and my_list_b.
-# print(list(zip(my_list_a, my_list_b)))
+print(list(zip(my_list_a, my_list_b)))
 print(summed_lists)
 
 # summed_lists = []
@@ -42,13 +46,32 @@ from the longer list.
 
 The idea is the same, see:
 """
-
-my_list_a = [10, 2, 3, 4, 5]
-my_list_b = [12, 2, 3, 6, 50, 60, 70]
-summed_lists = [x + y for x,
-                y in zip_longest(my_list_a, my_list_b, fillvalue=0)]
-print(summed_lists)  # [22, 4, 6, 10, 55, 60, 70]
+# Solution 2:
+# my_list_a = [10, 2, 3, 4, 5]
+# my_list_b = [12, 2, 3, 6, 50, 60, 70]
+# summed_lists = [x + y for x,
+#                 y in zip_longest(my_list_a, my_list_b, fillvalue=0)]
+# print(summed_lists)  # [22, 4, 6, 10, 55, 60, 70]
 
 # In this case, we use the "fillvalue" as 0 (zero), so we can
 # capture the remaining values from the larger list, performing
 # calculations, without getting an error in our program (infinite loop).
+
+# Solution 3:
+# my_list_a = [10, 2, 3, 40, 5, 6, 7]
+# my_list_b = [1, 2, 3, 4]
+
+# list_sum = []
+# for i in range(min(len(my_list_a), len(my_list_b))):
+#     list_sum.append(my_list_a[i] + my_list_b[i])
+# print(list_sum)
+
+# Solution 4 (enumerate with only index):
+
+# my_list_a = [10, 2, 3, 40, 5, 6, 7]
+# my_list_b = [1, 2, 3, 4]
+
+# list_sum = []
+# for i, _ in enumerate(my_list_b):
+#     list_sum.append(my_list_a[i] + my_list_b[i])
+# print(list_sum)
