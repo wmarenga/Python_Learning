@@ -5,6 +5,7 @@ https://brasilescola.uol.com.br/matematica/fatorial.htm
 
 The recursion limit is 1000.
 To change the recursion limit, we use the command below:
+import sys
 sys.setrecursionlimit(1004)
 """
 
