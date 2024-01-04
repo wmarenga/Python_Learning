@@ -21,4 +21,7 @@ pip freeze
 
 Check module versions:
 pip index versions pymysql
+
+Last version:
+pip install pymysql --upgrade
 """
