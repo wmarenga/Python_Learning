@@ -18,4 +18,7 @@ pip uninstall package_name -y (without confirmation)
 
 Freeze (see packages):
 pip freeze
+
+Check module versions:
+pip index versions pymysql
 """
