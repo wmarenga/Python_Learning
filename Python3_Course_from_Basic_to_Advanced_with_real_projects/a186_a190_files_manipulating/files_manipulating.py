@@ -44,7 +44,7 @@ with open(file_path, 'w') as file:
 
 # !Creating a file for reading and writing:
 
-file = open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_files_manipulating\\abc.txt", 'w+')
+file = open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_a190_files_manipulating\\abc.txt", 'w+')
 file.write('line 1\n')
 file.write('line 2\n')
 file.write('line 3\n')
@@ -79,7 +79,7 @@ from asyncore import write
 
 
 try:
-    file = open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_files_manipulating\\abc.txt", 'w+')
+    file = open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_a190_files_manipulating\\abc.txt", 'w+')
     file.write('line')
     file.seek(0)
     print(file.read())
@@ -88,7 +88,7 @@ finally:
 
 # !More Pythomic way, as it opens and closes the file automatically:
 
-with open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_files_manipulating\\abc.txt", 'w+') as file:
+with open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_a190_files_manipulating\\abc.txt", 'w+') as file:
     # file.write('line 1\r\n') # Windows
     file.write('line 1\n')  # MacOS
     file.write('line 2\n')
@@ -101,12 +101,12 @@ with open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_C
 
 # !Just reading the contents of the file (r):
 
-with open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_files_manipulating\\abc.txt", 'r') as file:
+with open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_a190_files_manipulating\\abc.txt", 'r') as file:
     print(file.read())
 
 # !Activate the function to add things to file => append (a+):
 
-with open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_files_manipulating\\abc.txt", 'a+') as file:
+with open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_a190_files_manipulating\\abc.txt", 'a+') as file:
     file.write('Other line\n')
     file.seek(0, 0)
     print(file.readline())
@@ -114,7 +114,7 @@ with open(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_C
 # !Removing the file:
 
 import os
-os.remove(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_files_manipulating\\abc.txt")
+os.remove(r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from Basic_to_Advanced_with_real_projects\\a186_a190_files_manipulating\\abc.txt")
 
 """
 # !Creating and manipulating json files:
@@ -136,5 +136,5 @@ print(d1)
 # !Converting to json:
 d1_json = json.dumps(d1, indent=True)
 
-with open('a186_files_manipulating/abc.json', 'w+') as file:
+with open('a186_a190_files_manipulating/abc.json', 'w+') as file:
     file.write(d1_json)
