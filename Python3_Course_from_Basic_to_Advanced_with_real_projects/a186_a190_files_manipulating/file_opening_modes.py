@@ -2,6 +2,7 @@
 # with open (context manager) and useful methods of TextIOWrapper
 # We use the open function to open a file in Python (it may or may not exist).
 
+import json
 import os
 
 # !Modos:
@@ -26,6 +27,10 @@ import os
 # json.load
 
 # !Example 1
+
+# !Another way:
+base_dir = os.path.dirname(__file__)
+save_to = os.path.join(base_dir, 'file_name.json')
 
 file_path = r"J:\\Github\\Dev_and_DataScience_Learning\\Python_Learning\\Python3_Course_from_Basic_to_Advanced_with_real_projects\\a186_a190_files_manipulating\\abc.txt"
 

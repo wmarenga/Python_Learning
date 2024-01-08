@@ -1,24 +1,24 @@
 """
-Faça uma lista de tarefas com as seguintes opções:
-    adicionar tarefa
-    listar tarefas
-    opção de desfazer (a cada vez que chamarmos, desfaz a última ação)
-    opção de refazer (a cada vez que chamarmos, refaz a última ação)
-    ['Tarefa 1', 'Tarefa 2']
-    ['Tarefa 1'] <- Desfazer
-    ['Tarefa 1', 'Tarefa 2'] <- Refazer
-    input <- Nova tarefa
+Make a to-do list with the following options:
+-> add task
+-> list tasks
+-> undo option (each time we call it, it undoes the last action)
+-> redo option (each time we call, it redoes the last action)
+-> ['Task 1', 'Task 2']
+-> ['Task 1'] <- Undo
+-> ['Task 1', 'Task 2'] <- Redo
+-> input <- New task
 """
 
 
 def show_op(todo_list):
-    print('\nTarefas: ')
+    print('\nTasks: ')
     print(todo_list, end='\n')
 
 
 def do_undo(todo_list, redo_list):
     if not todo_list:
-        print('Nada a desfazer')
+        print('Nothing to undo')
         return
 
     last_todo = todo_list.pop()
@@ -27,7 +27,7 @@ def do_undo(todo_list, redo_list):
 
 def do_redo(todo_list, redo_list):
     if not redo_list:
-        print('Nada a refazer')
+        print('Nothing to remake')
         return
 
     last_redo = redo_list.pop()
@@ -43,9 +43,9 @@ if __name__ == '__main__':
     redo_list = []
 
     while True:
-        todo = input('Digite uma tarefa ou [undo, redo, listar]: ')
+        todo = input('Enter a task or [undo, redo, list]: ')
 
-        if todo == 'listar':
+        if todo == 'list':
             show_op(todo_list)
             continue
         elif todo == 'undo':
