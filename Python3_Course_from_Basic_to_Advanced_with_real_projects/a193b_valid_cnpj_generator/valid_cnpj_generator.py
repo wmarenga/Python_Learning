@@ -1,0 +1,1 @@
+from Python3_Course_from_Basic_to_Advanced_with_real_projects.a193b_valid_cnpj_generator.my_cnpj_generator import generator_module

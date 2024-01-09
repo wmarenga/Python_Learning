@@ -35,6 +35,7 @@ def to_undo(tasks, tasks_redo):
     print(f'{task=} removed from to-do list.')
     tasks_redo.append(task)
     print()
+    to_list(tasks)
 
 
 def to_redo(tasks, tasks_redo):
@@ -70,21 +71,32 @@ while True:
     print('Commands: list, undo and redo')
     task = input('Enter a task or command: ')
 
-    if task == 'list':
-        to_list(tasks)
-        continue
-    elif task == 'undo':
-        to_undo(tasks, tasks_redo)
-        to_list(tasks)
-        continue
-    elif task == 'redo':
-        to_redo(tasks, tasks_redo)
-        to_list(tasks)
-        continue
-    elif task == 'clear':
-        os.system('cls')
-        continue
-    else:
-        to_add(task, tasks)
-        to_list(tasks)
-        continue
+    commands = {
+        'list': lambda: to_list(tasks),
+        'undo': lambda: to_undo(tasks, tasks_redo),
+        'redo': lambda: to_redo(tasks, tasks_redo),
+        'clear': lambda: os.system('cls'),
+        'add': lambda: to_add(task, tasks),
+    }
+    commands = commands.get(task) if commands.get(task) is not None else \
+        commands['add']
+    commands()
+
+    # if task == 'list':
+    #     to_list(tasks)
+    #     continue
+    # elif task == 'undo':
+    #     to_undo(tasks, tasks_redo)
+    #     to_list(tasks)
+    #     continue
+    # elif task == 'redo':
+    #     to_redo(tasks, tasks_redo)
+    #     to_list(tasks)
+    #     continue
+    # elif task == 'clear':
+    #     os.system('cls')
+    #     continue
+    # else:
+    #     to_add(task, tasks)
+    #     to_list(tasks)
+    #     continue

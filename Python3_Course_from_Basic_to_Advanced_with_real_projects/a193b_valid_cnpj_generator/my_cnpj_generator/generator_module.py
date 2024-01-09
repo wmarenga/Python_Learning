@@ -4,5 +4,5 @@ from random import random
 import random
 
 
-def gera():
+def generate():
     pass

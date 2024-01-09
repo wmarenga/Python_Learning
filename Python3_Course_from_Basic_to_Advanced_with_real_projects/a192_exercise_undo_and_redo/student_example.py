@@ -2,7 +2,7 @@ from os import system
 from time import sleep
 
 my_list = []
-undo = []
+undo_list = []
 exception_list = ['List', 'list', 'Undo', 'undo', 'Redo', 'redo',
                   'Clear', 'clear', 'L', 'l', 'U', 'u', 'R', 'r', 'C', 'c']
 
@@ -15,9 +15,9 @@ def printgraphic(msg):
 
 def internal():
     print('='*50)
-    print('Tarefas:')
+    print('Tasks:')
     for index, item in enumerate(my_list):
-        print(f' {index} -> {item}')
+        print(f' {index+1} -> {item}')
 
 
 def to_execute(input):
@@ -26,15 +26,15 @@ def to_execute(input):
             internal()
         elif input == 'U':
             if my_list:
-                undo.append(my_list[-1])
+                undo_list.append(my_list[-1])
                 my_list.pop()
                 internal()
             else:
                 printgraphic('Nothing to undo.')
         elif input[0] == 'R':
-            if undo:
-                my_list.append(undo[-1])
-                undo.pop()
+            if undo_list:
+                my_list.append(undo_list[-1])
+                undo_list.pop()
                 internal()
             else:
                 printgraphic('Nothing to Redo.')
